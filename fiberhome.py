@@ -55,7 +55,7 @@ def get_device_details():
 	dns2 = None
 
 
-	requestStatus = requests.get("http://192.168.8.1/xml_action.cgi?method=get&module=duster&file=status1")
+	requestStatus = requests.get("http://192.168.1.1/xml_action.cgi?method=get&module=duster&file=status1")
 	api_response = requestStatus.content.replace('\t','').split('\n')
 	for results in api_response:
         	if "<hardware_version>" in results:
